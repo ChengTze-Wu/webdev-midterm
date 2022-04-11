@@ -1,0 +1,30 @@
+/* css reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/* var */
+:root {
+    --main-color: #0f6fc5;
+    --secondary-color: #272c33;
+    --moodle-color: #f98012;
+}
+
+.split-container {
+    display: flex;
+}
+.sidebar {
+    width: 15%;
+    border-right: 1px solid var(--secondary-color);
+}
+
+.main {
+    width: 85%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+}
