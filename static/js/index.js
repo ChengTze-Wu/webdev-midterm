@@ -13,7 +13,9 @@ function linkToPage() {
     const nav_items = document.querySelectorAll(".nav_item");
     nav_items.forEach((nav_item) => {
         nav_item.addEventListener("click", async () => {
-            const content = await getPage(`/${nav_item.id}.html`);
+            const content = await getPage(
+                `/webdev-midterm/${nav_item.id}.html`
+            );
             renderToRoot(content);
         });
     });
