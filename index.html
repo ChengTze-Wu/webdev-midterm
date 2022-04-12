@@ -8,20 +8,52 @@
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="ChengTze" />
-        <title>Moodle</title>
+        <title>Moodle3.0</title>
+        <script
+            src="https://kit.fontawesome.com/1ed414d8e4.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="./static/css/style.css" />
     </head>
     <body>
         <div class="split-container">
             <!-- area-l -->
             <div class="sidebar">
-                <div class="logo">NTUST</div>
+                <div class="logo">
+                    <img
+                        class="taiwan_tech_logo"
+                        src="/static/img/taiwantech.png"
+                    />
+                    <p>Moodle教學平台</p>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="搜尋課程" />
+                </div>
                 <nav class="nav">
                     <ul class="nav_items">
-                        <li id="courses" class="nav_item">修課課程</li>
-                        <li id="courses_taken" class="nav_item">歷史課程</li>
+                        <li id="courses" class="nav_item">
+                            <i class="fa-solid fa-book-open"></i>
+                            <a>修習中課程</a>
+                        </li>
+                        <li id="courses_taken" class="nav_item">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <a>歷史課程</a>
+                        </li>
                     </ul>
                 </nav>
+                <button class="sidebar_btn">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <div class="config">
+                    <div class="user">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>承澤</span>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <p class="copyright">© 2022 四工管四乙 B10601132 吳承澤.</p>
+                </footer>
             </div>
             <!-- area-r -->
             <main id="root" class="main"></main>
