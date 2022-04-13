@@ -38,5 +38,35 @@ function switchMode() {
     });
 }
 
+function shrinkSidebar() {
+    const sidebar_btn = document.querySelector(".sidebar_btn");
+    const sidebar_btn_i = document.querySelector(".sidebar_btn > i");
+    const displaies = document.querySelectorAll(".display");
+    const sidebar = document.querySelector(".sidebar");
+    const toggle = document.querySelector(".toggle");
+    let status = 0;
+    sidebar_btn.addEventListener("click", () => {
+        if (status == 0) {
+            sidebar.classList.add("sidebar_shrink");
+            sidebar_btn_i.classList.add("rotate");
+            displaies.forEach((display) => {
+                display.classList.add("hidden");
+            });
+            toggle.classList.add("toggle_shrink");
+            status = 1;
+        } else {
+            sidebar.classList.remove("sidebar_shrink");
+            sidebar_btn_i.classList.remove("rotate");
+            displaies.forEach((display) => {
+                display.classList.remove("hidden");
+            });
+            toggle.classList.remove("toggle_shrink");
+            status = 0;
+        }
+        // console.log(status);
+    });
+}
+
 linkToPage();
 switchMode();
+shrinkSidebar();

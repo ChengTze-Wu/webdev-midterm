@@ -13,6 +13,11 @@
             src="https://kit.fontawesome.com/1ed414d8e4.js"
             crossorigin="anonymous"
         ></script>
+        <link
+            rel="shortcut icon"
+            href="./static/img/taiwantech.png"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="./static/css/style.css" />
         <link rel="stylesheet" href="./static/css/courses.css" />
     </head>
@@ -25,21 +30,21 @@
                         class="taiwan_tech_logo"
                         src="./static/img/taiwantech.png"
                     />
-                    <p>Moodle教學平台</p>
+                    <p class="display">Moodle教學平台</p>
                 </div>
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="搜尋課程" />
+                    <input class="display" type="text" placeholder="搜尋課程" />
                 </div>
                 <nav class="nav">
                     <ul class="nav_items">
                         <li id="courses" class="nav_item">
                             <i class="fa-solid fa-book-open"></i>
-                            <a>修習中課程</a>
+                            <a class="display">修習中課程</a>
                         </li>
                         <li id="courses_taken" class="nav_item">
                             <i class="fa-solid fa-box-archive"></i>
-                            <a>歷史課程</a>
+                            <a class="display">歷史課程</a>
                         </li>
                     </ul>
                 </nav>
@@ -49,7 +54,7 @@
                 <div class="config">
                     <div class="user">
                         <i class="fa-solid fa-circle-user"></i>
-                        <span>承澤</span>
+                        <span class="display">承澤</span>
                     </div>
                     <label class="toggle" for="toggle">
                         <i class="fa-solid fa-lightbulb"></i>
@@ -58,11 +63,13 @@
                             type="checkbox"
                             id="toggle"
                         />
-                        <div class="toggle__fill"></div>
+                        <div class="toggle__fill display"></div>
                     </label>
                 </div>
                 <footer class="footer">
-                    <p class="copyright">© 2022 四工管四乙 B10601132 吳承澤.</p>
+                    <p class="copyright display">
+                        © 2022 四工管四乙 B10601132 吳承澤.
+                    </p>
                 </footer>
             </div>
             <!-- area-r -->
