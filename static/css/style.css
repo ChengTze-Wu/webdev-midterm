@@ -119,8 +119,7 @@ ul {
     transition: border 0.3s;
 }
 .sidebar_btn > i {
-    color: var(--mode-color);
-    transition: color 0.3s;
+    color: white;
 }
 .sidebar_btn:hover {
     cursor: pointer;
