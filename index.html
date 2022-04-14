@@ -19,10 +19,38 @@
             type="image/x-icon"
         />
         <link rel="stylesheet" href="./static/css/style.css" />
+        <link rel="stylesheet" href="./static/css/home.css" />
         <link rel="stylesheet" href="./static/css/courses.css" />
+        <link rel="stylesheet" href="./static/css/courses_taken.css" />
     </head>
     <body>
         <div class="split-container">
+            <!-- headbar -->
+            <div class="headbar">
+                <div class="headbar_logo">
+                    <img
+                        class="taiwan_tech_logo"
+                        src="./static/img/taiwantech.png"
+                    />
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="搜尋課程" />
+                </div>
+                <li id="courses" class="nav_item">
+                    <i class="fa-solid fa-book-open"></i>
+                </li>
+                <li id="courses_taken" class="nav_item">
+                    <i class="fa-solid fa-box-archive"></i>
+                </li>
+                <label class="toggle" for="toggle">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <input class="toggle__input" type="checkbox" id="toggle" />
+                </label>
+                <div class="user">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </div>
             <!-- area-l -->
             <div class="sidebar">
                 <div class="logo">
@@ -56,14 +84,13 @@
                         <i class="fa-solid fa-circle-user"></i>
                         <span class="display">承澤</span>
                     </div>
-                    <label class="toggle" for="toggle">
+                    <label class="toggle-l toggle" for="toggle">
                         <i class="fa-solid fa-lightbulb"></i>
                         <input
                             class="toggle__input"
                             type="checkbox"
                             id="toggle"
                         />
-                        <div class="toggle__fill display"></div>
                     </label>
                 </div>
                 <footer class="footer">
@@ -73,7 +100,9 @@
                 </footer>
             </div>
             <!-- area-r -->
-            <main id="root" class="main"></main>
+            <main id="root" class="main">
+                <div class="banner">test</div>
+            </main>
         </div>
         <script src="./static/js/index.js"></script>
     </body>

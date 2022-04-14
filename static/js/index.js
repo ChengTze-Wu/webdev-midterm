@@ -19,10 +19,25 @@ function linkToPage() {
     });
 }
 
+function linkToHome() {
+    const logo = document.querySelector(".logo");
+    const headbar_logo = document.querySelector(".headbar_logo");
+    logo.addEventListener("click", async () => {
+        const content = await getPage("./home.html");
+        renderToRoot(content);
+    });
+    headbar_logo.addEventListener("click", async () => {
+        const content = await getPage("./home.html");
+        renderToRoot(content);
+    });
+}
+
 function switchMode() {
     const body = document.querySelector("body");
     const toggle = document.getElementById("toggle");
-    window.addEventListener("load", () => {
+    window.addEventListener("load", async () => {
+        const content = await getPage("./home.html");
+        renderToRoot(content);
         if (toggle.checked) {
             body.classList.add("dark");
         } else {
@@ -43,7 +58,10 @@ function shrinkSidebar() {
     const sidebar_btn_i = document.querySelector(".sidebar_btn > i");
     const displaies = document.querySelectorAll(".display");
     const sidebar = document.querySelector(".sidebar");
-    const toggle = document.querySelector(".toggle");
+    const toggle_l = document.querySelector(".toggle-l");
+    const nav_item = document.querySelectorAll(".nav_item");
+    const logo = document.querySelector(".logo");
+    const search = document.querySelector(".search");
     let status = 0;
     sidebar_btn.addEventListener("click", () => {
         if (status == 0) {
@@ -52,7 +70,13 @@ function shrinkSidebar() {
             displaies.forEach((display) => {
                 display.classList.add("hidden");
             });
-            toggle.classList.add("toggle_shrink");
+            nav_item.forEach((n) => {
+                n.classList.add("sidebar-center");
+            });
+            search.classList.add("sidebar-center");
+
+            logo.classList.add("sidebar-center");
+            toggle_l.classList.add("toggle_shrink");
             status = 1;
         } else {
             sidebar.classList.remove("sidebar_shrink");
@@ -60,7 +84,12 @@ function shrinkSidebar() {
             displaies.forEach((display) => {
                 display.classList.remove("hidden");
             });
-            toggle.classList.remove("toggle_shrink");
+            nav_item.forEach((n) => {
+                n.classList.remove("sidebar-center");
+            });
+            search.classList.remove("sidebar-center");
+            logo.classList.remove("sidebar-center");
+            toggle_l.classList.remove("toggle_shrink");
             status = 0;
         }
         // console.log(status);
@@ -68,5 +97,6 @@ function shrinkSidebar() {
 }
 
 linkToPage();
+linkToHome();
 switchMode();
 shrinkSidebar();
